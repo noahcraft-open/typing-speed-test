@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --border: #0f3460;
+  --accent: #e94560;
+  --accent-glow: rgba(233, 69, 96, 0.15);
+  --text: #eee;
+  --muted: #8892b0;
+  --correct: #64ffda;
+  --wrong: #ff6b6b;
+  --cursor: #e94560;
+  --upcoming: #495670;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes countDown {
+  from { transform: scale(1.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.cursor-blink { animation: blink 1s step-end infinite; }
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+.pulse { animation: pulse 0.3s ease; }
+.count-down { animation: countDown 0.3s ease; }
+
+.typing-font {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
